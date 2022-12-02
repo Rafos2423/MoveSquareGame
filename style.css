@@ -1,0 +1,205 @@
+html, body {
+	height: 100%;
+	width: 100%;
+	display: flex;
+	margin: 0px;
+}
+
+html {
+	overflow: hidden;
+}
+
+body,
+#menu, #tile, #buttonArea, #messageArea, .menu--text, .square,
+.modal, .modal--visible,
+.field__cell--tile, #escape, #time, #movements {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.border, .square,
+#title, #options, #button, #messageArea,
+.field__cell--null, .field__cell--tile {
+	position: absolute;
+}
+
+#title, #options, #button, #messageArea {
+	z-index: 2;
+	background-color: white;
+}
+
+#title, .menu--text, .menu--value, #button, #message, .field__cell--tile {
+	font-family: Arial;
+}
+
+.border, .square {
+	z-index: 1;
+}
+
+#button:hover, #movements:hover, #escape:hover, #time:hover {
+	cursor: pointer;
+}
+
+#menu {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#title {
+	top: 180px;
+	font-size: 60px;
+	font-weight: bold;
+	color: #77438a;
+}
+
+#options {
+	top: 320px;
+}
+
+.menu--opt {
+	display: flex;
+	padding: 15px 20px;
+	border-top: 5px solid #381945;
+	box-shadow: 5px  0 0 0 #381945,
+				-5px 0 0 0 #381945,
+                15px 0 10px 0 #ad72c2,
+				-15px 0 10px 0 #ad72c2;
+}
+
+.menu--opt:first-child {
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.menu--opt:last-child {
+	border-bottom: 5px solid #381945;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+
+.menu--opt:hover {
+	background-color: #ad72c2;
+}
+
+.menu--text, .menu--value {
+	height: 45px;
+	font-size: 36px;
+}
+
+.menu--text {
+	justify-content: left;
+	width: 500px;	
+}
+
+.menu--value {
+	width: 90px;
+}
+
+#button {
+	top: 620px;
+	font-size: 50px;
+	font-weight: bold;
+	background-color: #ad72c2;
+	color: #381945;
+	border-radius: 15px;
+	padding: 10px 20px;
+}
+
+#button:hover {
+	color: white;
+	background-color: #77438a;
+}
+
+#messageArea {
+	top: 880px;
+	font-size: 80px;
+	color: red;
+}
+
+#message {
+	width: 440px;
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 5px 8px;
+	font-size: 20px;
+	color: black;
+}
+
+.square {
+	background-color: #381945;
+	font-weight: bold;
+	color: white;
+}
+
+.border {
+	background: #ad72c2;
+	transition-property: all;
+	transition-timing-function: linear;
+}
+
+#field, #modal, #modal--visible {
+	height: 800px;
+	width: 800px;
+	border-radius: 5px;
+}
+
+#field {
+	background-color: #ad72c2;
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	top: 65px;
+}
+
+.field__cell--null {
+	background-color: #77438a;
+}
+
+.field__cell--tile {
+	background-color: #381945;
+	color: white;
+	font-weight: bold;
+}
+
+.modal {
+	opacity: 0;
+	visibility: hidden;
+	background-color: rgba(38, 17, 46, 0.3);
+	z-index: 1;
+	color: white;
+	font-size: 120px;
+	width: 100%;
+}
+
+.modal--visible {
+	transition: opacity 1s ease-in 0.3s;
+	opacity: 1 !important;
+	visibility: visible !important;
+}
+
+#movements, #escape, #time {
+	border-radius: 10px;
+	background-color: #381945;
+	font-size: 30px;
+	color: white;
+	height: 70px;
+	display: flex;
+	position: relative;
+	top: 425px;
+}
+
+#movements {
+	width: 175px;
+	right: 85px;
+}
+
+#escape {
+	width: 200px;
+}
+
+#time {
+	width: 175px;
+	left: 85px;
+}
